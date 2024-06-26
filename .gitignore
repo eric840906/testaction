@@ -1,0 +1,9 @@
+
+/guoshipartners/static/js/*
+node_modules
+/isip/isip_function.src.js
+/isip/isip_function.v2.js
+/isip/isip.src-staging.js
+/isip/isip.src.js
+/isip/isip.v2.js
+/coverage/*
