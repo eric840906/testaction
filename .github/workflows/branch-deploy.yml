@@ -330,4 +330,12 @@ jobs:
                   folder: guoshipartners
                   target-folder: guoshipartners
                   clean: true
+                  clean-exclude: |
+                    static/config/*
+                    static/html/*
+                    static/images/*
+                    static/js/*
+                    static/NativeGeneImageChecker/*
+                    static/qrcode/*
+                    static/tampermonkeyScript/*
                   commit-message: ${{github.event.issue.title || github.event.pull_request.title}}
