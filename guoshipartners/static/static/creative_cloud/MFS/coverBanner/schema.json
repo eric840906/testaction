@@ -1,8 +1,0 @@
-{
-  "imageItems": {
-    "title": "圖片",
-    "type": "imageArray",
-    "objectKey": "image",
-    "aspectRatio": "640x1360"
-  }
-}
