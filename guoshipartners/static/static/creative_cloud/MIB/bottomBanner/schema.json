@@ -1,0 +1,12 @@
+{
+  "image": {
+    "title": "置底小 banner",
+    "description": "圖片",
+    "url": "",
+    "fold": false,
+    "type": "image",
+    "packFolder": "images",
+    "aspectRatio": "640x100",
+    "allowDiffResolution": false
+  }
+}

@@ -1,0 +1,31 @@
+<xml>
+  <linkXml>
+    <playerMode>mobile-incover</playerMode>
+    <playerType>BOTTOM_LOCATION_GALLERY</playerType>
+    <bypassButtonSecond>0</bypassButtonSecond>
+    <show_identity>true</show_identity>
+    <guid>6b88541e-2b91-424c-9a1b-de2664f19bed</guid>
+    <requestTitle>MIB Location Gallery 02</requestTitle>
+    <defaultURL/>
+    <clickURL>
+      <![CDATA[ null ]]>
+    </clickURL>
+    <PID>1000036</PID>
+    <UID>20146</UID>
+    <body>{pack_parameter}</body>
+    <tracking_code count="0">
+    </tracking_code>
+    <emojis/>
+    <Extensions>
+      <Extension type="OneAD">
+        <CustomEvents count="0">
+        </CustomEvents>
+      </Extension>
+    </Extensions>
+  </linkXml>
+  <videos/>
+  <companions>
+    {banner1}
+    {banner2}
+  </companions>
+</xml>

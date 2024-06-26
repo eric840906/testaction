@@ -1,0 +1,31 @@
+<xml>
+  <linkXml>
+    <playerMode>mobile-fullscreen</playerMode>
+    <playerType>FULLSCREEN_COVER_POSTER</playerType>
+    <bypassButtonSecond>0</bypassButtonSecond>
+    <show_identity>true</show_identity>
+    <guid>1e0dcf70-9cac-421a-b72a-6bea589e76e3</guid>
+    <requestTitle>MFS-Poster-DEV-withTimetable</requestTitle>
+    <defaultURL/>
+    <clickURL>
+      <![CDATA[{videoClickURL}]]>
+    </clickURL>
+    <PID>1000036</PID>
+    <UID>20146</UID>
+    <body>{pack_parameter}</body>
+    <tracking_code count="0">
+    </tracking_code>
+    <emojis/>
+    <Extensions>
+      <Extension type="OneAD">
+        <CustomEvents count="0">
+        </CustomEvents>
+      </Extension>
+    </Extensions>
+  </linkXml>
+  <videos/>
+  <companions>
+    {banner1}
+    {banner2}
+  </companions>
+</xml>

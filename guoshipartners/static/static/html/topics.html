@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            async function getTopics() {
+                try {
+                    if ('browsingTopics' in document && document.featurePolicy.allowsFeature('browsing-topics')) {
+                        console.log('document.browsingTopics() is supported');
+                        let topics = await document.browsingTopics();
+
+                        window.returnedTopics = [];
+                        //test
+                        // topics = [
+                        //     { configVersion: 'chrome.2', modelVersion: '4', taxonomyVersion: '2', topic: 263, version: 'chrome.2:2:4' },
+                        //     { configVersion: 'chrome.2', modelVersion: '4', taxonomyVersion: '2', topic: 264, version: 'chrome.2:2:4' },
+                        // ];
+                        for (const topic of topics) {
+                            window.returnedTopics.push(topic.topic);
+                        }
+                        sendPixel(window.returnedTopics.toString());
+                        console.log('Called from topics.html in iframe:', topics, '\nNumber of topics: ', topics.length);
+                    } else {
+                        sendPixel('document.browsingTopics not supported');
+                        console.log('document.browsingTopics not supported');
+                    }
+                } catch (error) {
+                    console.log('Error:', error);
+                    sendPixel('Error');
+                }
+            }
+
+            getTopics();
+
+            (function () {
+                var s = document.createElement('script'),
+                    el = document.getElementsByTagName('script')[0];
+                s.async = true;
+                s.src = 'https://pixel.onead.com.tw/static/js/onead-pixel.min.js';
+                el.parentNode.insertBefore(s, el);
+            })();
+            function sendPixel(_params) {
+                window.onead_pixel = window.onead_pixel || [];
+                window.onead_pixel.push({
+                    uid: '19830122',
+                    type: 'init',
+                });
+
+                window.onead_pixel.push({
+                    type: 'tracker',
+                    value: { name: 'ViewContent', content_category: _params },
+                });
+            }
+        </script>
+    </body>
+</html>

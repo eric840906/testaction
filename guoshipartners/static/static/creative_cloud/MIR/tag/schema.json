@@ -1,0 +1,86 @@
+{
+  "itemsImages": {
+    "title": "上方大圖",
+    "type": "image",
+    "aspectRatio": "688x914"
+  },
+  "itemInfo": {
+    "title": "下方小圖",
+    "type": "imageArray",
+    "objectKey": "image",
+    "aspectRatio": "648x320",
+    "min": 2,
+    "max": 5
+  },
+  "clickDots": {
+    "title": "點點設定",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "posX": {
+          "title": "X座標",
+          "description": "點點的X軸位置(0~688)",
+          "type": "nunber"
+        },
+        "posY": {
+          "title": "Y座標",
+          "description": "點點的Y軸位置(0~914)",
+          "type": "nunber"
+        }
+      }
+    }
+  },
+  "dotColor": {
+    "title": "點點顏色(普通)",
+    "type": "color",
+    "default": "#ffffff"
+  },
+  "dotSelectColor": {
+    "title": "點點顏色(選取)",
+    "type": "color",
+    "default": "#f17310"
+  },
+  "shadowShow": {
+    "title": "陰影",
+    "type": "select",
+    "options": [
+      {
+        "title": "顯示",
+        "value": "yes"
+      },
+      {
+        "title": "隱藏",
+        "value": "no"
+      }
+    ]
+  },
+  "borderShow": {
+    "title": "邊框",
+    "type": "select",
+    "options": [
+      {
+        "title": "顯示",
+        "value": "yes"
+      },
+      {
+        "title": "隱藏",
+        "value": "no"
+      }
+    ]
+  },
+  "numberH": {
+    "title": "頁碼位置",
+    "type": "select",
+    "options": [
+      {
+        "title": "左邊",
+        "value": "left"
+      },
+      {
+        "title": "右邊",
+        "value": "right"
+      }
+    ]
+  }
+}

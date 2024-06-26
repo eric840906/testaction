@@ -1,0 +1,45 @@
+{
+  "imageItems": {
+    "title": "Gallery 圖片",
+    "type": "imageArray",
+    "objectKey": "image",
+    "packFolder": "images",
+    "min": 3,
+    "max": 3
+  },
+  "mapImage": {
+    "title": "(不用改)",
+    "fold": true,
+    "default": "images/map.png"
+  },
+  "searchImage": {
+    "title": "(不用改)",
+    "fold": true,
+    "default": "images/search.png"
+  },
+  "landmarkImage": {
+    "title": "(不用改)",
+    "fold": true,
+    "default": "images/Component 1.svg"
+  },
+  "crosshairImage": {
+    "title": "(不用改)",
+    "fold": true,
+    "default": "images/Frame.svg"
+  },
+  "loadingImage": {
+    "title": "(不用改)",
+    "fold": true,
+    "default": "images/loading.svg"
+  },
+  "arrowUpImage": {
+    "title": "(不用改)",
+    "fold": true,
+    "default": "images/ArrowUp.svg"
+  },
+  "buttonText": {
+    "title": "按鈕文字",
+    "type": "string",
+    "default": "上滑查看最近分店"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "imageItems": {
+    "title": "imageItems",
+    "description": "圖片",
+    "url": "",
+    "fold": false,
+    "type": "imageArray",
+    "objectKey": "image",
+    "packFolder": "image",
+    "aspectRatio": "640x360",
+    "allowDiffResolution": false
+  },
+  "loopNum": {
+    "fold": true,
+    "title": "loopNum(不用改)",
+    "type": "number",
+    "default": 6
+  },
+  "cameraFar": {
+    "fold": true,
+    "title": "cameraFar(不用改)",
+    "type": "number",
+    "default": 731
+  }
+}

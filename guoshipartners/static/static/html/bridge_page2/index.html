@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bridge</title>
+</head>
+
+<style>
+  body {
+    margin: 0;
+  }
+
+  #bridge-frame {
+    border: none;
+    width: 100%;
+    height: 100vh;
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  #bridge-video {
+    position: sticky;
+    top: 0;
+  }
+</style>
+
+<body>
+  <!-- <h1>bridge page</h1> -->
+  <div id="bridge">
+    <video id="bridge-video" width="100%" playsinline="true" webkit-playsinline="true" crossOrigin="anonymous" autoplay
+      muted>
+    </video>
+    <iframe id="bridge-frame" scrolling="no"></iframe>
+  </div>
+  <script>
+    const bridgeVideo = document.getElementById('bridge-video')
+    const bridgeFrame = document.getElementById('bridge-frame')
+    const params = {}
+    const searchParams = new URLSearchParams(window.location.search)
+    for (let [key, value] of searchParams) {
+      params[key] = value
+    }
+    bridgeVideo.src = params.video
+    bridgeFrame.src = params.link
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        console.log(entry.intersectionRatio)
+        if (entry.isIntersecting) {
+          console.log('pause')
+          bridgeVideo.pause()
+        } else {
+          console.log('play')
+          bridgeVideo.play()
+        }
+      })
+    }
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.85
+    }
+    const observer = new IntersectionObserver(observerCallback, options)
+    observer.observe(bridgeFrame)
+    bridgeFrame.addEventListener('load', () => {
+      setTimeout(() => window.scrollTo(0, 0), 100)
+      console.log('iframe ready')
+      window.addEventListener('scroll', () => {
+        if (bridgeFrame.getBoundingClientRect().top <= 0) {
+          bridgeFrame.scrolling = ''
+          return
+        }
+        if (bridgeFrame.getBoundingClientRect().top >= 0) {
+          bridgeFrame.scrolling = 'no'
+          document.body.style.overflow = ''
+        }
+
+      })
+    })
+  </script>
+</body>
+
+</html>

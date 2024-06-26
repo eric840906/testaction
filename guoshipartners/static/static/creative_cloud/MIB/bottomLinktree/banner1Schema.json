@@ -1,0 +1,14 @@
+{
+  "bannerImage": {
+    "title": "圖片路徑",
+    "type": "image",
+    "packFolder": "images",
+    "aspectRatio": "640x360"
+  },
+  "text": {
+    "title": "按鈕文字",
+    "type": "string",
+    "placeholder": "按鈕上的字",
+    "default": "上滑查看更多"
+  }
+}

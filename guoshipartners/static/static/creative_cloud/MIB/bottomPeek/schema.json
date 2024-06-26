@@ -1,0 +1,97 @@
+{
+  "h5 banner1": {
+    "type": "object",
+    "properties": {
+      "image": {
+        "type": "imageArray",
+        "packFolder": "iframes/img1H5/images",
+        "aspectRatio": "440x480",
+        "min": 1,
+        "max": 10
+      },
+      "html": {
+        "type": "file",
+        "packFilename": "iframes/img1H5",
+        "formats": [
+          "html"
+        ]
+      },
+      "js": {
+        "type": "file",
+        "packFilename": "iframes/img1H5",
+        "formats": [
+          "js"
+        ]
+      }
+    }
+  },
+  "h5 banner2": {
+    "image": {
+      "type": "imageArray",
+      "packFolder": "iframes/img2H5/images",
+      "aspectRatio": "440x480",
+      "min": 1,
+      "max": 10
+    },
+    "html": {
+      "type": "file",
+      "packFilename": "iframes/img2H5",
+      "formats": [
+        "html"
+      ]
+    },
+    "js": {
+      "type": "file",
+      "packFilename": "iframes/img2H5",
+      "formats": [
+        "js"
+      ]
+    }
+  },
+  "h5 banner3": {
+    "image": {
+      "type": "imageArray",
+      "packFolder": "iframes/img3H5/images",
+      "aspectRatio": "440x480",
+      "min": 1,
+      "max": 10
+    },
+    "html": {
+      "type": "file",
+      "packFilename": "iframes/img3H5",
+      "formats": [
+        "html"
+      ]
+    },
+    "js": {
+      "type": "file",
+      "packFilename": "iframes/img3H5",
+      "formats": [
+        "js"
+      ]
+    }
+  },
+  "imageItems": {
+    "title": "h5 banner 設定(不用改)",
+    "type": "array",
+    "fold": true,
+    "default": [
+      {
+        "image": "./iframes/img1H5/index.html"
+      },
+      {
+        "image": "./iframes/img2H5/index.html"
+      },
+      {
+        "image": "./iframes/img3H5/index.html"
+      }
+    ],
+    "min": 3,
+    "max": 3
+  },
+  "swingImage": {
+    "type": "image",
+    "packFolder": "images",
+    "default": "images/swing_img.png"
+  }
+}

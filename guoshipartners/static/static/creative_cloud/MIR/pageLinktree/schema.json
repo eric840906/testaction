@@ -1,0 +1,33 @@
+{
+  "imageItems": {
+    "type": "imageArray",
+    "title": "內頁圖",
+    "objectKey": "image",
+    "aspectRatio": "700x855",
+    "min": 3,
+    "max": 5
+  },
+  "lastPage": {
+    "type": "image",
+    "title": "底圖",
+    "aspectRatio": "720x875"
+  },
+  "linktreeItems": {
+    "type": "array",
+    "title": "按鈕",
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "按鈕文字"
+        }
+      }
+    }
+  },
+  "linktreeBackground": {
+    "title": "背景顏色",
+    "type": "color",
+    "default": "#ffcc00"
+  }
+}

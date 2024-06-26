@@ -1,0 +1,74 @@
+{
+  "imageItems": {
+    "type": "imageArray",
+    "title": "圖像 icon",
+    "objectKey": "image",
+    "aspectRatio": "200x200",
+    "min": 3,
+    "max": 3
+  },
+  "backgroundImg": {
+    "type": "image",
+    "title": "置底 banner 背景",
+    "aspectRatio": "640x280"
+  },
+  "frames": {
+    "type": "object",
+    "title": "拉出後 banner lottie 設定",
+    "properties": {
+      "0": {
+        "type": "array",
+        "item": {
+          "type": "array",
+          "item": {
+            "type": "number"
+          },
+          "min": 2,
+          "max": 2
+        },
+        "min": 1,
+        "max": 5
+      },
+      "1": {
+        "type": "array",
+        "item": {
+          "type": "array",
+          "item": {
+            "type": "number"
+          },
+          "min": 2,
+          "max": 2
+        },
+        "min": 1,
+        "max": 5
+      },
+      "2": {
+        "type": "array",
+        "item": {
+          "type": "array",
+          "item": {
+            "type": "number"
+          },
+          "min": 2,
+          "max": 2
+        },
+        "min": 1,
+        "max": 5
+      }
+    }
+  },
+  "arrowShow": {
+    "title": "箭頭顯示設定",
+    "type": "select",
+    "options": [
+      {
+        "title": "顯示",
+        "value": true
+      },
+      {
+        "title": "隱藏",
+        "value": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "imageItems": {
+    "type": "imageArray",
+    "title": "內頁圖",
+    "objectKey": "image",
+    "aspectRatio": "440x640",
+    "min": 2,
+    "max": 3
+  },
+  "textItems": {
+    "title": "tab設定",
+    "type": "array",
+    "item": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "title": "tab文字",
+          "type": "string"
+        }
+      },
+      "min": 2,
+      "max": 3
+    }
+  }
+}

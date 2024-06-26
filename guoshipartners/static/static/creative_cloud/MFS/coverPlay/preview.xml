@@ -1,0 +1,31 @@
+<xml>
+  <linkXml>
+    <playerMode>mobile-fullscreen</playerMode>
+    <playerType>FULLSCREEN_COVER_PLAY</playerType>
+    <bypassButtonSecond>0</bypassButtonSecond>
+    <show_identity>true</show_identity>
+    <guid>41c70b77-8973-4742-99bd-343f846d0fa4</guid>
+    <requestTitle>FULLSCREEN_COVER_PLAY</requestTitle>
+    <defaultURL/>
+    <clickURL>
+      <![CDATA[{videoClickURL}]]>
+    </clickURL>
+    <PID>1000036</PID>
+    <UID>20146</UID>
+    <body>{pack_parameter}</body>
+    <tracking_code count="0">
+    </tracking_code>
+    <emojis/>
+    <Extensions>
+      <Extension type="OneAD">
+        <CustomEvents count="0">
+        </CustomEvents>
+      </Extension>
+    </Extensions>
+  </linkXml>
+  <videos/>
+  <companions>
+    {banner1}
+    {banner2}
+  </companions>
+</xml>
