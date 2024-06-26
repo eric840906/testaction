@@ -329,5 +329,5 @@ jobs:
                   branch: production
                   folder: guoshipartners
                   target-folder: guoshipartners
-                  clean: false
+                  clean: true
                   commit-message: ${{github.event.issue.title || github.event.pull_request.title}}
