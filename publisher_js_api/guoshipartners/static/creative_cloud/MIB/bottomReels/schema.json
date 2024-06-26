@@ -1,0 +1,47 @@
+{
+  "imageItems": {
+    "title": "banner圖",
+    "type": "imageArray",
+    "objectKey": "image",
+    "packFolder": "images",
+    "aspectRatio": "640x360",
+    "min": 1,
+    "max": 3
+  },
+  "arrowUpImage": {
+    "title": "箭頭(不用改)",
+    "type": "image",
+    "default": "images/arrow-up.svg",
+    "fold": true
+  },
+  "mediaIcon": {
+    "title": "按鈕icon",
+    "type": "image",
+    "aspectRatio": "25x25",
+    "default": "images/media-icon.svg",
+    "packFolder": "image",
+    "formats": [
+      "png",
+      "jpg",
+      "svg"
+    ]
+  },
+  "navText": {
+    "title": "按鈕文字",
+    "type": "string",
+    "default": "上滑看短影音"
+  },
+  "startTime1": {
+    "title": "第一段影片時間",
+    "type": "string",
+    "default": "0"
+  },
+  "startTime2": {
+    "title": "第二段影片時間",
+    "type": "string"
+  },
+  "startTime3": {
+    "title": "第三段影片時間",
+    "type": "string"
+  }
+}

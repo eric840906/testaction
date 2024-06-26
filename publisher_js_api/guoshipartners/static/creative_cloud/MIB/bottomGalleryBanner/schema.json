@@ -1,0 +1,46 @@
+{
+  "imageItems": {
+    "title": "imageItems",
+    "description": "圖片",
+    "url": "",
+    "fold": false,
+    "type": "imageArray",
+    "objectKey": "image",
+    "packFolder": "image",
+    "aspectRatio": "300x250",
+    "allowDiffResolution": false
+  },
+  "imgSquare": {
+    "title": "imgSquare",
+    "fold": true,
+    "description": "方形圖片",
+    "type": "boolean",
+    "default": false
+  },
+  "touchPlay": {
+    "title": "touchPlay",
+    "fold": true,
+    "description": "觸碰後自動播放",
+    "type": "boolean",
+    "default": false
+  },
+  "autoPlay": {
+    "title": "autoPlay",
+    "fold": true,
+    "description": "自動播放",
+    "type": "boolean",
+    "default": false
+  },
+  "haveDots": {
+    "title": "haveDots",
+    "description": "indicators",
+    "type": "boolean",
+    "default": false
+  },
+  "scrollNonScale": {
+    "title": "scrollNonScale",
+    "fold": true,
+    "type": "boolean",
+    "default": false
+  }
+}

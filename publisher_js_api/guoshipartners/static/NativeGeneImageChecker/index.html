@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaTiveGene Image Checker</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="./CropperJS/dist/cropper.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <header>
+    <a href="https://www.onead.com.tw/" class="navbar-logo" alt="oneadLogo"
+      ><p style="display: none"></p
+    ></a>
+  </header>
+  <body>
+    <div class="wrapper">
+      <h1>NaTiveGene Image Checker v0.01</h1>
+      <input class="fileInput" type="file" accept="image/*" />
+      <div class="imgContainer">
+        <img
+          class="placeholder"
+          src="./src/upload_placeholder.png"
+          alt="uploadImage"
+          draggable="false"
+        />
+        <img class="editingImg" src="" alt="圖片預覽" />
+      </div>
+      <div class="controlPanel">
+        <div>
+          <button type="button" class="imgPreviewBtn" data-value="1.7777">
+            16 : 9
+          </button>
+        </div>
+        <div>
+          <button type="button" class="imgPreviewBtn" data-value="1.2">
+            6 : 5
+          </button>
+        </div>
+        <div>
+          <button type="button" class="imgPreviewBtn" data-value="2">
+            2 : 1
+          </button>
+        </div>
+        <div>
+          <button type="button" class="imgPreviewBtn" data-value="1">
+            1 : 1
+          </button>
+        </div>
+        <div>
+          <button type="button" class="imgPreviewBtn" data-value="1.91">
+            1.9 : 1
+          </button>
+        </div>
+        <!-- <div class="previewContainer">
+          <div class="imgPreviewArea preview16_9" data-value="1.7777"></div>
+          <p class="scale">16 : 9</p>
+        </div>
+        <div class="previewContainer">
+          <div class="imgPreviewArea preview6_5" data-value="1.2"></div>
+          <p class="scale">6 : 5</p>
+        </div>
+        <div class="previewContainer">
+          <div class="imgPreviewArea preview2_1" data-value="2"></div>
+          <p class="scale">2 : 1</p>
+        </div>
+        <div class="previewContainer">
+          <div class="imgPreviewArea preview1_1" data-value="1"></div>
+          <p class="scale">1 : 1</p>
+        </div>
+        <div class="previewContainer">
+          <div class="imgPreviewArea preview1_9_1" data-value="1.91"></div>
+          <p class="scale">1.9 : 1</p>
+        </div> -->
+      </div>
+    </div>
+    <script src="./CropperJS/dist/cropper.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

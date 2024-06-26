@@ -1,0 +1,31 @@
+{
+  "btnImg": {
+    "type": "imageArray",
+    "title": "下方icon",
+    "objectKey": "image",
+    "aspectRatio": "200x200",
+    "min": 3,
+    "max": 3
+  },
+  "bannerImg": {
+    "type": "imageArray",
+    "title": "banner圖",
+    "objectKey": "image",
+    "aspectRatio": "720x1280",
+    "min": 4,
+    "max": 4
+  },
+  "popImg": {
+    "type": "imageArray",
+    "title": "點開圖",
+    "objectKey": "image",
+    "aspectRatio": "600x500",
+    "min": 3,
+    "max": 3
+  },
+  "btnBackgroundImg": {
+    "type": "image",
+    "title": "背景圖",
+    "aspectRatio": "720x380"
+  }
+}

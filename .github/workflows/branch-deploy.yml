@@ -1,0 +1,333 @@
+name: 'deployment'
+
+# The workflow to execute on is comments that are newly created
+on:
+    pull_request:
+        types: [closed]
+    issue_comment:
+        types: [created]
+
+# Permissions needed for reacting and adding comments for IssueOps commands
+permissions:
+    pull-requests: write
+    deployments: write
+    contents: write
+    checks: read
+
+jobs:
+    compare:
+        name: Compare Files
+        runs-on: ubuntu-latest
+        steps:
+            - name: branch-deploy
+              if: ${{ github.event.issue.pull_request && !github.event.pull_request.merged }}
+              id: branch-deploy
+              run: |
+                  comment=${{github.event.comment.body}}
+                  if echo "$comment" | grep -q ".QA"; then
+                      echo "QA=true" >> $GITHUB_ENV
+                  else
+                      exit 1
+                  fi
+            - name: Get Current SHA
+              run: |
+                  pr_info=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.issue.number || github.event.number }}")
+                  branch_sha=$(echo "$pr_info" | jq -r '.head.sha')
+                  echo "CURRENT_SHA=$branch_sha" >> $GITHUB_ENV
+
+            - name: Check Changed Files
+              id: changed-files
+              run: |
+                  compare_url="https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.number || github.event.issue.number }}/files?per_page=100"
+                  files_changed=$(curl -s -X GET -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "$compare_url" | jq -r '.[].filename')
+                  echo "$files_changed"
+
+                  file_patterns=(
+                    'oneplayer/build/player-mir.js'
+                    'oneplayer/build/player-mib.js'
+                    'oneplayer/build/player-mfs.js'
+                    'oneplayer/build/player-ms.js'
+                    'oneplayer/build/player-sw.js'
+                    'oneplayer/build/player-dw.js'
+                    'oneplayer/build/player-vpaid.js'
+                    'oneplayer/build/onead-lib-sf.js'
+                    'oneplayer/build/player-sf.js'
+                    'oneplayer/build/player-ctv.js'
+                    'oneplayer/build/player-simid.js'
+                    'onead_erp/build/oneadKeyword.config.js'
+                    'onead_erp/build/resource_bag.config.js'
+                    'onead_erp/build/tracking_code.config.js'
+                    'onead_creative/build/action.js'
+                    'onead_lib/build/onead-lib.js'
+                    'onead_pixel/build/onead-pixel.js'
+                    'player_draft/build/player-df.js'
+                    'ad_serv/build/ad-serv.js'
+                    'isip/build/isip.build.js'
+                    'player_api/build/material.js',
+                    'CloudPreview/cloudPreview.js'
+                  )
+                  for pattern in "${file_patterns[@]}"; do
+                    if echo "$files_changed" | grep -q "$pattern"; then
+                      filename=$(basename "$pattern" | sed 's/\.js//')
+                      env_var_name="BUILD_$(echo "$filename" | tr -d -c '[:alnum:]' | tr '[:lower:]' '[:upper:]')"
+                      echo "contains $filename"
+                      echo "$env_var_name=true" >> "$GITHUB_ENV"
+                    fi
+                  done
+            - name: List Changed Files
+              id: list-files
+              run: |
+                  mfs=$BUILD_MFS
+                  mir=$BUILD_MIR
+                  mib=$BUILD_MIB
+                  ms=$BUILD_MS
+                  sw=$BUILD_SW
+                  dw=$BUILD_DW
+                  vpaid=$BUILD_VPAID
+                  lib_sf=$BUILD_LIB_SF
+                  sf=$BUILD_SF
+                  ctv=$BUILD_CTV
+                  simid=$BUILD_SIMID
+                  cloudpreview=$BUILD_CLOUDPREVIEW
+        outputs:
+            mir: ${{env.BUILD_PLAYERMIR}}
+            mib: ${{env.BUILD_PLAYERMIB}}
+            mfs: ${{env.BUILD_PLAYERMFS}}
+            ms: ${{env.BUILD_PLAYERMS}}
+            sw: ${{env.BUILD_PLAYERSW}}
+            dw: ${{env.BUILD_PLAYERDW}}
+            vpaid: ${{env.BUILD_PLAYERVPAID}}
+            lib_sf: ${{env.BUILD_ONEADLIBSF}}
+            sf: ${{env.BUILD_PLAYERSF}}
+            ctv: ${{env.BUILD_PLAYERCTV}}
+            simid: ${{env.BUILD_PLAYERSIMID}}
+            kw: ${{env.BUILD_ONEADKEYWORDCONFIG}}
+            bag: ${{env.BUILD_RESOURCEBAGCONFIG}}
+            tc: ${{env.BUILD_TRACKINGCODECONFIG}}
+            act: ${{env.BUILD_ACTION}}
+            lib: ${{env.BUILD_ONEADLIB}}
+            df: ${{env.BUILD_PLAYERDF}}
+            adserv: ${{env.BUILD_ADSERV}}
+            isip: ${{env.BUILD_ISIPBUILD}}
+            material: ${{env.BUILD_MATERIAL}}
+            current_sha: ${{env.CURRENT_SHA}}
+            qa: ${{env.QA}}
+            cloudpreview: ${{env.BUILD_CLOUDPREVIEW}}
+
+    build:
+        name: Build Production codes
+        needs: [compare]
+        env:
+            DEPLOY_TO_QA: ${{needs.compare.outputs.qa}}
+            CURRENT_SHA: ${{needs.compare.outputs.current_sha}}
+            BUILD_PLAYERMIR: ${{needs.compare.outputs.mir}}
+            BUILD_PLAYERMIB: ${{needs.compare.outputs.mib}}
+            BUILD_PLAYERMFS: ${{needs.compare.outputs.mfs}}
+            BUILD_PLAYERMS: ${{needs.compare.outputs.ms}}
+            BUILD_PLAYERSW: ${{needs.compare.outputs.sw}}
+            BUILD_PLAYERDW: ${{needs.compare.outputs.dw}}
+            BUILD_PLAYERVPAID: ${{needs.compare.outputs.vpaid}}
+            BUILD_ONEADLIBSF: ${{needs.compare.outputs.lib_sf}}
+            BUILD_PLAYERSF: ${{needs.compare.outputs.sf}}
+            BUILD_PLAYERCTV: ${{needs.compare.outputs.ctv}}
+            BUILD_PLAYERSIMID: ${{needs.compare.outputs.simid}}
+            BUILD_ONEADLIB: ${{needs.compare.outputs.lib}}
+            BUILD_PLAYERDF: ${{needs.compare.outputs.df}}
+            BUILD_ADSERV: ${{needs.compare.outputs.adserv}}
+            BUILD_ONEADKEYWORDCONFIG: ${{needs.compare.outputs.kw}}
+            BUILD_RESOURCEBAGCONFIG: ${{needs.compare.outputs.bag}}
+            BUILD_TRACKINGCODECONFIG: ${{needs.compare.outputs.tc}}
+            BUILD_ACTION: ${{needs.compare.outputs.act}}
+            BUILD_ISIPBUILD: ${{needs.compare.outputs.isip}}
+            BUILD_MATERIAL: ${{needs.compare.outputs.material}}
+            BUILD_CLOUDPREVIEW: ${{needs.compare.outputs.cloudpreview}}
+            PLAYER_DIRECTORY: oneplayer
+            ISIP_DIRECTORY: isip
+            ONEAD_LIB_DIRECTORY: onead_lib
+            ONEAD_ERP_DIRECTORY: onead_erp
+            ONEAD_CREATIVE_DIRECTORY: onead_creative
+            ONEAD_PIXEL_DIRECTORY: onead_pixel
+            CLOUD_PREVIEW_DIRECTORY: CloudPreview
+            PLAYER_DRAFT_DIRECTORY: player_draft
+            AD_SERV_DIRECTORY: ad_serv
+            PLAYER_API_DIRECTORY: player_api
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+              with:
+                  ref: ${{env.CURRENT_SHA}}
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: 18
+            - name: Install Oneplayer Dependencies
+              #確認有 oneplayer 的檔案需要被 build 才在 oneplayer 安裝 npm
+              if: ${{env.BUILD_PLAYERMIR == 'true' || env.BUILD_PLAYERMIB == 'true' || env.BUILD_PLAYERMFS == 'true' || env.BUILD_PLAYERMS == 'true' || env.BUILD_PLAYERSW == 'true' || env.BUILD_PLAYERDW == 'true' || env.BUILD_PLAYERVPAID == 'true' || env.BUILD_ONEADLIBSF == 'true' || env.BUILD_PLAYERSF == 'true' || env.BUILD_PLAYERCTV == 'true'|| env.BUILD_PLAYERSIMID == 'true'}}
+              run: |
+                  cd ${{env.PLAYER_DIRECTORY}}
+                  npm install
+            - name: Install Isip Dependencies
+              #確認有 oneplayer 的檔案需要被 build 才在 oneplayer 安裝 npm
+              if: ${{env.BUILD_ISIPBUILD == 'true'}}
+              run: |
+                  cd ${{env.ISIP_DIRECTORY}}
+                  npm install
+            - name: Install Onead_lib Dependencies
+              if: ${{env.BUILD_ONEADLIB == 'true'}}
+              run: |
+                  cd ${{env.ONEAD_LIB_DIRECTORY}}
+                  npm install
+            - name: Install Onead_erp Dependencies
+              if: ${{env.BUILD_ONEADKEYWORDCONFIG == 'true' || env.BUILD_RESOURCEBAGCONFIG == 'true' || env.BUILD_TRACKINGCODECONFIG == 'true'}}
+              run: |
+                  cd ${{env.ONEAD_ERP_DIRECTORY}}
+                  npm install
+            - name: Install Onead_creative Dependencies
+              if: ${{env.BUILD_ACTION == 'true'}}
+              run: |
+                  cd ${{env.ONEAD_CREATIVE_DIRECTORY}}
+                  npm install
+            - name: Install Player_df Dependencies
+              if: ${{env.BUILD_PLAYERDF == 'true'}}
+              run: |
+                  cd ${{env.PLAYER_DRAFT_DIRECTORY}}
+                  npm install
+            - name: Install Ad_serv Dependencies
+              if: ${{env.BUILD_ADSERV == 'true'}}
+              run: |
+                  cd ${{env.AD_SERV_DIRECTORY}}
+                  npm install
+
+            - name: Install Player api Dependencies
+              if: ${{env.BUILD_MATERIAL == 'true'}}
+              run: |
+                  cd ${{env.PLAYER_API_DIRECTORY}}
+                  npm install
+            - name: Install Cloud Preview Dependencies
+              if: ${{env.BUILD_CLOUDPREVIEW == 'true'}}
+              run: |
+                  cd ${{env.CLOUD_PREVIEW_DIRECTORY}}
+                  npm install
+            - name: Build player-mir.min.js
+              if: ${{env.BUILD_PLAYERMIR == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-mir
+            - name: Build player-mib.min.js
+              if: ${{env.BUILD_PLAYERMIB == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-mib
+            - name: Build player-mfs.min.js
+              if: ${{env.BUILD_PLAYERMFS == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-mfs
+            - name: Build player-ms.min.js
+              if: ${{env.BUILD_PLAYERMS == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-ms
+            - name: Build player-sw.min.js
+              if: ${{env.BUILD_PLAYERSW == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-superwall
+            - name: Build player-dw.min.js
+              if: ${{env.BUILD_PLAYERDW == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-desktop
+            - name: Build player-vpaid.min.js
+              if: ${{env.BUILD_PLAYERVPAID == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-vpaid
+            - name: Build onead-lib-sf.min.js
+              if: ${{env.BUILD_ONEADLIBSF == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-lib_sf
+            - name: Build player-sf.min.js
+              if: ${{env.BUILD_PLAYERSF == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-player_sf
+            - name: Build player-ctv.min.js
+              if: ${{env.BUILD_PLAYERCTV == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-ctv
+            - name: Build player-simid.min.js
+              if: ${{env.BUILD_PLAYERSIMID == 'true'}}
+              working-directory: ${{env.PLAYER_DIRECTORY}}
+              run: |
+                  npm run prod-simid
+            - name: Build Keyword Config
+              if: ${{env.BUILD_ONEADKEYWORDCONFIG == 'true'}}
+              working-directory: ${{env.ONEAD_ERP_DIRECTORY}}
+              run: |
+                  npm run kw
+            - name: Build Tracking Code Config
+              if: ${{env.BUILD_TRACKINGCODECONFIG == 'true'}}
+              working-directory: ${{env.ONEAD_ERP_DIRECTORY}}
+              run: |
+                  npm run tc
+            - name: Build Resourcebag Config
+              if: ${{env.BUILD_RESOURCEBAGCONFIG == 'true'}}
+              working-directory: ${{env.ONEAD_ERP_DIRECTORY}}
+              run: |
+                  npm run bag
+            - name: Build Onead_lib
+              if: ${{env.BUILD_ONEADLIB == 'true'}}
+              working-directory: ${{env.ONEAD_LIB_DIRECTORY}}
+              run: |
+                  npm run prod
+            - name: Build Material
+              if: ${{env.BUILD_MATERIAL == 'true'}}
+              working-directory: ${{env.PLAYER_API_DIRECTORY}}
+              run: |
+                  npm run prod
+            - name: Build Action
+              if: ${{env.BUILD_ACTION == 'true'}}
+              working-directory: ${{env.ONEAD_CREATIVE_DIRECTORY}}
+              run: |
+                  npm run act
+            - name: Build Isip
+              if: ${{env.BUILD_ISIPBUILD == 'true'}}
+              working-directory: ${{env.ISIP_DIRECTORY}}
+              run: |
+                  npm run prod
+            - name: Build player-df.min.js
+              if: ${{env.BUILD_PLAYERDF == 'true'}}
+              working-directory: ${{env.PLAYER_DRAFT_DIRECTORY}}
+              run: |
+                  npm run prod-df
+            - name: Build ad-serv.min.js
+              if: ${{env.BUILD_ADSERV == 'true'}}
+              working-directory: ${{env.AD_SERV_DIRECTORY}}
+              run: |
+                  npm run prod
+            - name: Build Cloud Preview
+              if: ${{env.BUILD_CLOUDPREVIEW == 'true'}}
+              working-directory: ${{env.CLOUD_PREVIEW_DIRECTORY}}
+              run: |
+                  npm run build
+            - name: Deploy to QA Branch
+              if: ${{env.DEPLOY_TO_QA == 'true'}}
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  branch: QA
+                  folder: guoshipartners
+                  target-folder: guoshipartners
+                  clean: false
+                  commit-message: ${{github.event.issue.title || github.event.pull_request.title}} QA
+            - name: Deploy to Production Branch
+              if: ${{github.event.pull_request.merged == true}}
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  branch: production
+                  folder: guoshipartners
+                  target-folder: guoshipartners
+                  clean: false
+                  commit-message: ${{github.event.issue.title || github.event.pull_request.title}}

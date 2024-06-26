@@ -1,0 +1,25 @@
+{
+  "topBanner": {
+    "title": "上半圖片",
+    "type": "image",
+    "packFolder": "images",
+    "aspectRatio": "640x360"
+  },
+  "bottomBanner": {
+    "title": "下半圖片",
+    "type": "image",
+    "packFolder": "images",
+    "aspectRatio": "640x535"
+  },
+  "scratchSkin": {
+    "title": "可刮圖片",
+    "type": "image",
+    "packFolder": "images",
+    "aspectRatio": "640x895"
+  },
+  "coachMark": {
+    "title": "coachmark(不用改)",
+    "fold": true,
+    "default": "content/coachmark.gif"
+  }
+}

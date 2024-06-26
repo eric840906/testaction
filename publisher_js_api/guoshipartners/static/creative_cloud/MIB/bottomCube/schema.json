@@ -1,0 +1,13 @@
+{
+  "imageItems": {
+    "title": "cube banner 圖",
+    "description": "圖片",
+    "url": "",
+    "fold": false,
+    "type": "imageArray",
+    "objectKey": "image",
+    "packFolder": "image",
+    "aspectRatio": "640x895",
+    "allowDiffResolution": false
+  }
+}

@@ -1,0 +1,2061 @@
+[
+    {
+        "adFormatName": "MFS",
+        "subADTypeName": "MFS_Cover_banner",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "133",
+        "bleedConfig": "mobile:down:20%",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/Cover_banner-f94d335d.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverBanner/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Cover_banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "template": {
+                        "name": "Cover_banner 模版",
+                        "template": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverBanner/mfs_cover_opening-jpg.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverBanner/schema.json"
+                    },
+                    "h5zip": {
+                        "name": "Cover_banner zip"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/7931/ac27efe4-fb10-40e9-a487-04ef10b4eece/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MFS",
+        "subADTypeName": "MFS_Cover_Play",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "157",
+        "bleedConfig": "mobile:down:20%",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Poster-0a75dd3e.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverPlay/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Cover_Play_intro",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "template": {
+                        "name": "Intro 設定",
+                        "template": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverPlay/mfs_cover_opening-webGL_MFS_play.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverPlay/schema.json"
+                    },
+                    "h5zip": {
+                        "name": "Cover_Play_intro"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設intro",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8472/1b5fe590-73a4-4d57-82ab-d05e5ade3833/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Cover_Play_banner",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 8,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Cover_Play_banner zip"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8482/4539915c-d412-4d07-9f2f-1bd1dbce5f25/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MFS",
+        "subADTypeName": "MFS_Cover_Story",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "152",
+        "bleedConfig": "mobile:up:18%;mobile:down:20%",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/Cover_Story_video-64c33fd5.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverStory/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "640x1360",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "Cover_Story_banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 4,
+                "maxClickURL": 4,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Cover_Story_banner zip"
+                    },
+                    "template": {
+                        "name": "Cover_Story_banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverStory/mfs_cover_story.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverStory/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9754/cc187ee8-0292-45b6-8879-75b3f7d59666/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MFS",
+        "subADTypeName": "MFS_Cover_Video",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "160",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Poster-0a75dd3e.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MFS/coverVideo/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "9x20",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            },
+            "banners": null
+        }
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Cube",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "48",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Cube-86fac813.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomCube/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "Bottom banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "bottomBanner banner zip"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設bottom banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9395/0c80d9e2-5449-4396-ab25-0fc9e819ffb9/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Cube banner",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 2,
+                "maxClickURL": 4,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Cube banner zip"
+                    },
+                    "template": {
+                        "name": "Cube banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomCube/mib_cube.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomCube/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": "0",
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9396/85d1481d-6426-400f-b8e7-3bc8ad8594e9/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Flash_Location",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "168",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomFlashLocation/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Location banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Location banner zip"
+                    },
+                    "template": {
+                        "name": "Location banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomFlashLocation/MIB_BOTTOM_FLASH_LOCATION_BANNER.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomFlashLocation/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9653/33839cd8-1310-459a-ae19-e14221b008df/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Map/Schedule",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "x_store",
+                    "x_movie"
+                ],
+                "editorConfig": {
+                    "x_store": {
+                        "name": "店點地圖"
+                    },
+                    "x_movie": {
+                        "name": "電影時刻表"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設map",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8710/ab61dec0-a3a5-46b0-b7fb-758c595a89d6/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Flash",
+                "xmlBannerKey": "banner3",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "flash zip"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 2,
+                    "bannerTitle": "預設flash",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/7197/d53fb2a4-ce55-4326-a3cb-d123a9b55868/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Flash_Location_banner",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "195",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomFlashLocationBanner/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Location banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Location banner zip"
+                    },
+                    "template": {
+                        "name": "Location banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomFlashLocationBanner/MIB_BOTTOM_FLASH_LOCATION_BANNER.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomFlashLocationBanner/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9653/33839cd8-1310-459a-ae19-e14221b008df/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Map/Schedule",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "x_store",
+                    "x_movie"
+                ],
+                "editorConfig": {
+                    "x_store": {
+                        "name": "店點地圖"
+                    },
+                    "x_movie": {
+                        "name": "電影時刻表"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設map",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8710/ab61dec0-a3a5-46b0-b7fb-758c595a89d6/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Flash",
+                "xmlBannerKey": "banner3",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "flash zip"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 2,
+                    "bannerTitle": "預設flash",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/7197/d53fb2a4-ce55-4326-a3cb-d123a9b55868/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Gallery",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "126",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomGallery3dBanner/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Gallery_3D banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 2,
+                "maxClickURL": 6,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Gallery_3D banner zip"
+                    },
+                    "template": {
+                        "name": "Gallery_3D banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomGallery3dBanner/MIB_Gallery_3D.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomGallery3dBanner/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/7851/79190ff7-30f9-4937-8226-857a124470a7/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Hit",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "88",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomHitLottie/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Hit_lottie banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Hit_lottie banner zip"
+                    },
+                    "template": {
+                        "name": "Hit_lottie banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomHitLottie/mib_hit_backCover_v2.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomHitLottie/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/6669/f536968a-74c8-40c2-bc6b-01317b7e3992/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Flash",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "flash zip"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設flash",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/6666/30282978-5b74-43f7-b308-1b25f2aaa903/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Linktree",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "167",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLinktree/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "MIB_Linktree banner1",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Linktree banner zip"
+                    },
+                    "template": {
+                        "name": "MIB_Star_lottie banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLinktree/mib_linktree_firstcut.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLinktree/banner1Schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner1",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9830/6fce68af-519d-4871-a98a-4bcfbe73c343/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "MIB_Linktree banner2",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 3,
+                "maxClickURL": 5,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Linktree banner2 zip"
+                    },
+                    "template": {
+                        "name": "MIB_Linktree banner2",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLinktree/mib_linktree_secondcut.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLinktree/banner2Schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設banner2",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9538/a9251fc5-c474-4703-bc52-4f1c8d1bd18d/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Location_Door_video",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "173",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLocationDoorVideo/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "Location banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Location banner zip"
+                    },
+                    "template": {
+                        "name": "Location banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLocationDoorVideo/MIB_BOTTOM_LOCATION_DOOR_VIDEO.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLocationDoorVideo/schema.xml"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9837/46de7198-b5f4-45cd-bfdf-8f53159fcda7/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Map/Schedule",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "x_store",
+                    "x_movie"
+                ],
+                "editorConfig": {
+                    "x_store": {
+                        "name": "店點地圖"
+                    },
+                    "x_movie": {
+                        "name": "電影時刻表"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設map",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8710/ab61dec0-a3a5-46b0-b7fb-758c595a89d6/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Location_Gallery",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "174",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Location-96334686.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLocationGallery/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Location_Gallery banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Location_Gallery banner zip"
+                    },
+                    "template": {
+                        "name": "Location_Gallery banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLocationGallery/MIB_BOTTOM_LOCATION_GALLERY.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomLocationGallery/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9223/ac597700-7851-4bff-8fc6-463a71fd1d39/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Map/Schedule",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "x_store",
+                    "x_movie"
+                ],
+                "editorConfig": {
+                    "x_store": {
+                        "name": "店點地圖"
+                    },
+                    "x_movie": {
+                        "name": "電影時刻表"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設map",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8710/ab61dec0-a3a5-46b0-b7fb-758c595a89d6/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Peek",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "114",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Peek-d1ad97f9.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomPeek/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "Peek banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Peek banner zip"
+                    },
+                    "template": {
+                        "name": "Peek banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomPeek/mib_peek.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomPeek/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8930/686770d6-2b0e-4b84-a514-db45155587c1/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Peek_Banner",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "164",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Peek-d1ad97f9.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomPeekBanner/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "Peek banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Peek banner zip"
+                    },
+                    "template": {
+                        "name": "Peek banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomPeekBanner/mib_peek.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomPeekBanner/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9820/73de4746-57cc-46aa-b40a-cd91d671db5c/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Peek image",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "image"
+                ],
+                "editorConfig": {
+                    "image": {
+                        "name": "Peek image",
+                        "aspectRatio": "640x360",
+                        "allowDiffResolution": false,
+                        "formats": [
+                            "jpg",
+                            "png"
+                        ]
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設peek image",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9029/0118ea77-f94f-40ef-abc0-3ab629de6477.jpg",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Reels",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "175",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Reels-bd4f472b.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomReels/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "640x1360",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "Reels banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Reels banner zip"
+                    },
+                    "template": {
+                        "name": "Reels banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomReels/mib_reels_v2.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomReels/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9822/1cc5d58f-627e-422f-9ab5-250412c07b15/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Star_Lottie",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "142",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarLottie/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "MIB_Star_lottie banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Star_lottie banner zip"
+                    },
+                    "template": {
+                        "name": "MIB_Star_lottie banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarLottie/mib_star_lottie.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarLottie/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9816/37840351-5e4f-43bc-9f3d-8b9d25517d30/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "bottom image",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip",
+                    "template"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "bottom banner"
+                    },
+                    "template": {
+                        "name": "bottom banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomBanner/bottomBanner.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomBanner/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設bottom banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8386/07d32dbd-3bc8-4bb7-91a5-2b889dcf3b5f/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Star_靜態圖",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "142",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarStatic/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "MIB_Star_static banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Star_static banner zip"
+                    },
+                    "template": {
+                        "name": "MIB_Star_static banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarStatic/mib_star靜態圖片ver.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarStatic/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9816/37840351-5e4f-43bc-9f3d-8b9d25517d30/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "bottom image",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Star_lottie banner 底圖"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設底圖",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8386/07d32dbd-3bc8-4bb7-91a5-2b889dcf3b5f/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Star_靜態圖無動畫",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "142",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarStatic_noAnim/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "MIB_Star_static banner without animation",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Star_static banner without animation zip"
+                    },
+                    "template": {
+                        "name": "MIB_Star_static banner without animation",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarStatic_noAnim/mib_star靜態圖片無收回動畫.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarStatic_noAnim/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9816/37840351-5e4f-43bc-9f3d-8b9d25517d30/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "bottom image",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Star_lottie banner 底圖"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設底圖",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8386/07d32dbd-3bc8-4bb7-91a5-2b889dcf3b5f/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIB",
+        "subADTypeName": "MIB_Star_Video",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "191",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIB_Star-adc85486.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarVideo/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "MIB_Star_lottie banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 3,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Star_lottie banner zip"
+                    },
+                    "template": {
+                        "name": "MIB_Star_lottie banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarVideo/mib_star靜態圖片ver.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIB/bottomStarVideo/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9816/37840351-5e4f-43bc-9f3d-8b9d25517d30/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "bottom image",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Star_lottie banner 底圖"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設底圖",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8386/07d32dbd-3bc8-4bb7-91a5-2b889dcf3b5f/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Page",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "182",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Page-bfda62ee.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/page/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 6,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "banner zip"
+                    },
+                    "template": {
+                        "name": "banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/page/MIR_Page_V2.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/page/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9812/1e496e21-956a-46a9-ba98-bd0bd5b4c61f/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Page_Banner",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "181",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Page_Banner-283ddae8.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/pageBanner/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "MIB_Page_banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 6,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Page_banner zip"
+                    },
+                    "template": {
+                        "name": "MIB_Page_banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/pageBanner/MIR_Pagebanner_V2.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/pageBanner/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9751/5262120b-fc5e-4c26-8849-55fa9ed12754/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Page_Linktree",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "169",
+        "schematicURL": null,
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/pageLinktree/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "MIB_Page_Linktree",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 5,
+                "maxClickURL": 8,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIB_Page_Linktree zip"
+                    },
+                    "template": {
+                        "name": "MIB_Page_Linktree",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/pageLinktree/MIR_Page_Linktree.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/pageLinktree/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9743/d64b6cd8-0ce7-41b2-a4a2-6c434ba2013e/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Poster",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "158",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Poster-0a75dd3e.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/poster/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Poster banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 4,
+                "maxClickURL": 4,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Poster banner zip"
+                    },
+                    "template": {
+                        "name": "Poster banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/poster/MIR_Poster.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/poster/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8999/b60b6cec-eacf-4cf6-a844-39f66bcc146d/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Map/Schedule",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "x_store",
+                    "x_movie"
+                ],
+                "editorConfig": {
+                    "x_store": {
+                        "name": "店點地圖"
+                    },
+                    "x_movie": {
+                        "name": "電影時刻表"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設time table",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8796/5a2d006a-7935-4a3c-8d20-01aaf27f3c69/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Poster_無定位",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "158",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Poster_Video-daf7542b.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/poster_singleBanner/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "Poster banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 4,
+                "maxClickURL": 4,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Poster banner zip"
+                    },
+                    "template": {
+                        "name": "Poster banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/poster_singleBanner/MIR_Poster.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/poster_singleBanner/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9747/6db45842-a5d7-4e29-b47d-c69f4ff56c31/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Poster_Video",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "165",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Poster_Video-daf7542b.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/posterVideo/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "Poster banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 4,
+                "maxClickURL": 4,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Poster banner zip"
+                    },
+                    "template": {
+                        "name": "Poster banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/posterVideo/MIR_Poster_Video.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/posterVideo/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9747/6db45842-a5d7-4e29-b47d-c69f4ff56c31/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "Map/Schedule",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "x_store",
+                    "x_movie"
+                ],
+                "editorConfig": {
+                    "x_store": {
+                        "name": "店點地圖"
+                    },
+                    "x_movie": {
+                        "name": "電影時刻表"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設time table",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/8796/5a2d006a-7935-4a3c-8d20-01aaf27f3c69/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Poster_Video_無定位",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "165",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Poster_Video-daf7542b.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/posterVideo_singleBanner/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "poster banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 6,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "banner zip"
+                    },
+                    "template": {
+                        "name": "banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/posterVideo_singleBanner/MIR_Poster_Video.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/posterVideo_singleBanner/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9747/6db45842-a5d7-4e29-b47d-c69f4ff56c31/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Scratch",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "119",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Scratch-b0ae6230.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/scratch/preview.xml",
+        "video": {
+            "name": "video",
+            "config": {
+                "aspectRatio": "1920x1080",
+                "allowDiffResolution": false,
+                "formats": [
+                    "mp4"
+                ],
+                "durationLimit": 30
+            },
+            "xmlDefault": {
+                "videoURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6057/1fbd9ad5-aa32-41e4-a3cf-4443cb2a44cc_800k.mp4",
+                "videoDuration": 30,
+                "videoFilesize": 4194304,
+                "videoThumbnailURL": "https://cdn-staging.onead.com.tw/uploads/material/video/file/6221/9b8314a9-09eb-4d59-aeb6-0fa4b399d3dd_05_thumbnail.jpg",
+                "videoTitle": "預設影片",
+                "videoClickURL": "https://www.onead.com.tw/"
+            }
+        },
+        "banners": [
+            {
+                "name": "scratch banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "scratch banner zip"
+                    },
+                    "template": {
+                        "name": "scratch banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/scratch/MIR_Scratch.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/scratch/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9826/530c8d6c-1ed6-4de0-b75e-291a879e836a/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            },
+            {
+                "name": "bottom banner",
+                "xmlBannerKey": "banner2",
+                "minClickURL": 1,
+                "maxClickURL": 1,
+                "editorTypes": [
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "bottom banner zip"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 1,
+                    "bannerTitle": "預設bottom banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/7595/7bcad493-4cb5-44fb-a732-27f787d06615/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Scratch_Banner",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "118",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Scratch_Banner-f9628544.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/scratchBanner/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Scratch Banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 2,
+                "maxClickURL": 2,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Scratch Banner zip"
+                    },
+                    "template": {
+                        "name": "Scratch Banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/scratchBanner/MIR_Scratch_BNB.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/scratchBanner/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9839/1a975c9a-14f1-4303-88c1-2e932fd4b146/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Tag",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "144",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Tag-3a897089.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/tag/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "MIB_TAG banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 3,
+                "maxClickURL": 6,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "MIR_Tag zip"
+                    },
+                    "template": {
+                        "name": "MIR_Tag banner",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/tag/MIR_TAG_自動翻頁長版.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/tag/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9749/8f6528ee-d85b-41d8-bed7-4342a552e2d2/index.html ",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "adFormatName": "MIR",
+        "subADTypeName": "MIR_Voting",
+        "previewDevice": [
+            "mobile"
+        ],
+        "sources": [
+            "speed",
+            "direct"
+        ],
+        "universal_id": "194",
+        "schematicURL": "https://onead.github.io/onead-creative-template/assets/MIR_Tag-3a897089.svg",
+        "xmlURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/voting/preview.xml",
+        "video": null,
+        "banners": [
+            {
+                "name": "Voting banner",
+                "xmlBannerKey": "banner1",
+                "minClickURL": 2,
+                "maxClickURL": 4,
+                "editorTypes": [
+                    "template",
+                    "h5zip"
+                ],
+                "editorConfig": {
+                    "h5zip": {
+                        "name": "Voting banner zip"
+                    },
+                    "template": {
+                        "name": "Voting banner template",
+                        "templateURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/voting/MIR_Voting.zip",
+                        "schemaURL": "https://ad-specs.guoshipartners.com/static/creative_cloud/MIR/voting/schema.json"
+                    }
+                },
+                "xmlDefault": {
+                    "bannerSeq": 0,
+                    "bannerTitle": "預設banner",
+                    "bannerURL": "https://cdn-staging.onead.com.tw/uploads/material/banner/file/9735/70b20d4c-2597-4969-8431-16499cd2b7c8/index.html",
+                    "bannerLinkURL": [
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw",
+                        "https://www.onead.com.tw"
+                    ]
+                }
+            }
+        ]
+    }
+]

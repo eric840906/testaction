@@ -1,0 +1,30 @@
+<xml>
+  <linkXml>
+    <playerMode>mobile-incover</playerMode>
+    <playerType>BOTTOM_GALLERY_BANNER</playerType>
+    <bypassButtonSecond>0</bypassButtonSecond>
+    <show_identity>true</show_identity>
+    <guid>3cfa082d-cf02-46a0-9ab2-a10f168394d9</guid>
+    <requestTitle>[test case] gallery_banner no url h5</requestTitle>
+    <defaultURL/>
+    <clickURL>
+      <![CDATA[ null ]]>
+    </clickURL>
+    <PID>1000036</PID>
+    <UID>20146</UID>
+    <body>{pack_parameter}</body>
+    <tracking_code count="0">
+    </tracking_code>
+    <emojis/>
+    <Extensions>
+      <Extension type="OneAD">
+        <CustomEvents count="0">
+        </CustomEvents>
+      </Extension>
+    </Extensions>
+  </linkXml>
+  <videos/>
+  <companions>
+    {banner1}
+  </companions>
+</xml>

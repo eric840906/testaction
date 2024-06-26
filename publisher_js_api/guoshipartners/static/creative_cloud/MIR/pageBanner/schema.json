@@ -1,0 +1,15 @@
+{
+  "imageItems": {
+    "type": "imageArray",
+    "title": "內頁圖",
+    "objectKey": "image",
+    "aspectRatio": "700x855",
+    "min": 3,
+    "max": 5
+  },
+  "lastPage": {
+    "title": "底圖",
+    "type": "image",
+    "aspectRatio": "720x875"
+  }
+}

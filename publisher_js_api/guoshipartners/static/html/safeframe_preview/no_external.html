@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preview</title>
+</head>
+
+<body style="margin: 0px;">
+    <div id="oneadIRDFPTag"></div>
+    <div id="div-inread-ad" style="background-color:white;"></div>
+    <script>
+        let adParam = {
+            player_type: "",
+            player_mode: "",
+            host: "",
+            l_url: "",
+        }
+
+        let iframeSrc = window.location.href;
+        const re = new RegExp(`(\\?|\\&)\\w+=(\\w+-\\w+|\\w+:\\/\\/[\\w.:\\/\\=?-]+|\\w+)`, "g");
+        let paramsArr = iframeSrc.match(re);
+        paramsArr.forEach((params) => {
+            let name = params.substr(1, params.indexOf("=") - 1);
+            let value = params.substr(params.indexOf("=") + 1, params.length)
+            adParam[name] = params.substr(params.indexOf("=") + 1, params.length)
+        })
+
+        // ====== 需要替換的資料 ======
+        let host = adParam.host
+        let playerMode = adParam.player_mode;
+        let playerType = adParam.player_type;
+        let l_url = adParam.l_url;
+        //
+        let iframe_url = host + 'ov_player/iframe/4462/1/opaque';
+        let slotElement = document.getElementById("oneadIRDFPTag");
+
+        function prepareAd() {
+            let clientParams = {
+                host: host,
+                slotElement: slotElement,
+                slotId: slotElement.id,
+                slotLimit: {
+                    width: "640",
+                    height: "360",
+                },
+                playMode: playerMode,
+                playerType: playerType,
+                noExternal: true,
+                dfpConfig: {
+                    googleViewPixel: "", //"%%VIEW_URL_UNESC%%",
+                    googleViewClick: "", //"%%CLICK_URL_UNESC%%",
+                },
+                queryAdCallback: () => { },
+            }
+
+            var clientJs = document.createElement("script");
+            clientJs.async = true;
+            clientJs.src = "https://ad-specs.guoshipartners.com/static/js/onead-lib-sf.min.js";
+            clientJs.onload = function () {
+                // OneId 判斷會用到 ONEAD 物件內的 player_mode 故再次設定
+                _ONEAD = {
+                    pub: {
+                        player_mode: playerMode,
+                        playerType: playerType,
+                    }
+                };
+                Guoshi.setup(clientParams);
+            };
+            document.head.appendChild(clientJs);
+        }
+        prepareAd();
+
+        let checkGetResponse = setInterval(() => {
+            if (window.ONEAD_get_response !== undefined) {
+                window.ONEAD_is_window_onload = true;
+                if (ONEAD_get_response[0] !== undefined && typeof ONEAD_get_response[0] == 'function') {
+                    ONEAD_get_response[0]({
+                        "guid": "2b2aad60-7b8b-45ef-8bd6-13c34da36006",
+                        "pid": 20146,
+                        "play_mode": playerMode,
+                        "is_custom_pid": "true",
+                        "force_backend": "",
+                        "term_id": "",
+                        "player_type": playerType,
+                        "holdon_second": 0,
+                        "bypass_second": 0,
+                        "isip_index": 0,
+                        "width": 640,
+                        "height": 390,
+                        "stage_width": 640,
+                        "stage_height": 390,
+                        "base_url": host,
+                        "iframe_url": iframe_url,
+                        "is_vast": "false",
+                        "l_url": l_url,
+                    });
+                }
+                clearInterval(checkGetResponse);
+            }
+        }, 500)
+    </script>
+</body>
+
+</html>

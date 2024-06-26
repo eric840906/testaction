@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preview</title>
+    <style>
+        .content {
+            max-width: 950px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .img {
+            width: 100%;
+            /* max-width: 640px; */
+        }
+
+        #ad-info {
+            /* position: fixed; */
+            width: 400px;
+            height: 100%;
+            background-color: black;
+            opacity: 0.4;
+            color: white;
+        }
+
+        #message-content {
+            margin: 5px;
+        }
+
+        @media screen and (max-width: 640px) {
+            .content {
+                max-width: 411px;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0px;">
+    <div id="onead-ir-tag"></div>
+    <script type="text/javascript">
+        let adParam = {
+            player_type: "", //string
+            player_mode: "", //string
+            host: "", //string
+            servingFlag: 0, //number
+            uid: "", //string
+            pid: "", //string
+        }
+
+        let iframeSrc = window.location.href;
+        const re = new RegExp(`(\\?|\\&)\\w+=(\\w+-\\w+|\\w+:\\/\\/[\\w.:\\/\\=?-]+|\\w+)`, "g");
+        let paramsArr = iframeSrc.match(re);
+        paramsArr.forEach((params) => {
+            let name = params.substr(1, params.indexOf("=") - 1);
+            let value = params.substr(params.indexOf("=") + 1, params.length)
+            adParam[name] = params.substr(params.indexOf("=") + 1, params.length)
+        })
+
+        //==
+        let playerMode = adParam.player_mode;
+        let playerType = adParam.player_type;
+        let pid = adParam.pid;
+        let uid = adParam.uid;
+        let host = adParam.host;
+        let servingFlag = adParam.servingFlag;
+        let slotDom = "";
+
+        callAd();
+        // ==
+        function callAd() {
+            switch (playerMode) {
+                case "dsp-creative":
+                    slotDom = document.getElementById("onead-ir-tag")
+                    break;
+                default:
+                    break;
+            }
+
+            _ONEAD = {};
+            _ONEAD.pub = {};
+            _ONEAD.pub.slotobj = slotDom;
+            _ONEAD.pub.slots = ["div-onead-ad"];
+            _ONEAD.pub.dedicated_pid = pid;
+            _ONEAD.pub.uid = uid;
+            _ONEAD.pub.external_url = host;
+            _ONEAD.pub.player_mode_div = "div-onead-ad";
+            _ONEAD.pub.player_mode = playerMode;
+            _ONEAD.pub.google_view_pixel = "";
+            _ONEAD.pub.google_view_click = "";
+            _ONEAD.pub.queryAdCallback = callback;
+            _ONEAD.pub.servingFlag = servingFlag;
+            _ONEAD.pub.no_external = false;
+            window.ONEAD_pubs = window.ONEAD_pubs || [];
+            ONEAD_pubs.push(_ONEAD);
+            jsAppend();
+        }
+        function jsAppend() {
+            var jsDom = document.createElement("script");
+            jsDom.src = "//ad-specs.guoshipartners.com/static/js/onead-lib-sf.min.js";
+            node = document.getElementsByTagName('body')[0];
+            node.appendChild(jsDom);
+        }
+        function callback(params) {
+            if (params.hasAd) {
+                // 有廣告
+            } else {
+                // 沒有查到廣告
+            }
+
+        }
+    </script>
+</body>
+
+</html>

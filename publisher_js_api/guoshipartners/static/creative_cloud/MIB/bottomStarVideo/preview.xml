@@ -1,0 +1,31 @@
+<xml>
+  <linkXml>
+    <playerMode>mobile-incover</playerMode>
+    <playerType>BOTTOM_STAR_VIDEO</playerType>
+    <bypassButtonSecond>0</bypassButtonSecond>
+    <show_identity>true</show_identity>
+    <guid>a7d5a0a1-8b3e-4a6f-9735-7be6129c327f</guid>
+    <requestTitle>MIB STAR VIDEO</requestTitle>
+    <defaultURL/>
+    <clickURL>
+      <![CDATA[ null ]]>
+    </clickURL>
+    <PID>1000036</PID>
+    <UID>20146</UID>
+    <body>{pack_parameter}</body>
+    <tracking_code count="">
+    </tracking_code>
+    <emojis/>
+    <Extensions>
+      <Extension type="OneAD">
+        <CustomEvents count="0">
+        </CustomEvents>
+      </Extension>
+    </Extensions>
+  </linkXml>
+  <videos/>
+  <companions>
+    {banner1}
+    {banner2}
+  </companions>
+</xml>

@@ -1,0 +1,55 @@
+{
+  "buttonArr": {
+    "title": "按鈕設定",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "title": "按鈕設定",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "按鈕文字",
+          "description": "按鈕上的文字內容"
+        },
+        "code": {
+          "type": "string",
+          "title": "按鈕帶的資料",
+          "description": ""
+        }
+      }
+    },
+    "min": 2,
+    "max": 5
+  },
+  "headerColor": {
+    "title": "標題顏色",
+    "type": "color",
+    "default": "#000000"
+  },
+  "background": {
+    "title": "背景圖",
+    "type": "image",
+    "packFolder": "images/bg.png",
+    "aspectRatio": "640x360"
+  },
+  "backgroundColor": {
+    "title": "背景顏色",
+    "type": "color",
+    "default": "#ffc085"
+  },
+  "buttonTextColor": {
+    "title": "按鈕文字顏色",
+    "type": "color",
+    "default": "#c9c9c9"
+  },
+  "heading": {
+    "title": "標題",
+    "type": "string",
+    "placeholder": "標題"
+  },
+  "text": {
+    "title": "副標題",
+    "type": "string",
+    "placeholder": "副標題"
+  }
+}

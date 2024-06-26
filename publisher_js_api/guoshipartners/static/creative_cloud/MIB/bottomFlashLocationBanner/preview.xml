@@ -1,0 +1,30 @@
+<xml>
+  <linkXml>
+    <playerMode>mobile-incover</playerMode>
+    <playerType>BOTTOM_FLASH_LOCATION_BANNER</playerType>
+    <bypassButtonSecond>5</bypassButtonSecond>
+    <show_identity>true</show_identity>
+    <guid>02a75bcf-b92c-4072-8d17-8981e973bf7e</guid>
+    <requestTitle>Bottom_Flash_Location_Banner 123</requestTitle>
+    <defaultURL/>
+    <clickURL>
+      <![CDATA[ null ]]>
+    </clickURL>
+    <PID>1000036</PID>
+    <UID>20146</UID>
+    <body>{pack_parameter}</body>
+    <tracking_code count="0"/>
+    <emojis/>
+    <Extensions>
+      <Extension type="OneAD">
+        <CustomEvents count="0"/>
+      </Extension>
+    </Extensions>
+  </linkXml>
+  <videos/>
+  <companions>
+    {banner1}
+    {banner2}
+    {banner3}
+  </companions>
+</xml>
