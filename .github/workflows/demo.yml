@@ -28,3 +28,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          exit 1
+
+    test:
+      runs-on: ubuntu-latest
+      if: ${{success()}}
+      needs: [build]
+      steps:
+        -name: run if previous job passses
+         run:  echo 123 
+      
+    
