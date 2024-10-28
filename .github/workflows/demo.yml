@@ -30,7 +30,7 @@ jobs:
           echo test, and deploy your project.
           exit 1
 
-    test:
+  test:
       runs-on: ubuntu-latest
       if: ${{success()}}
       needs: [build]
