@@ -35,7 +35,7 @@ jobs:
       if: ${{success()}}
       needs: [build]
       steps:
-        -name: run if previous job passses
-         run:  echo 123 
+        - name: run if previous job passses
+          run:  echo 123 
       
     
