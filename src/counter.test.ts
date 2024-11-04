@@ -26,5 +26,7 @@ describe('setupCounter', () => {
     expect(button.innerHTML).toBe('count is 1');
     button.click();
     expect(button.innerHTML).toBe('count is 2');
+    button.click();
+    expect(button.innerHTML).toBe('count is 3');
   });
 });
