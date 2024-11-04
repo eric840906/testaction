@@ -17,7 +17,7 @@ describe('setupCounter', () => {
 
   test('should initialize counter to 0', () => {
     setupCounter(button);
-    expect(button.innerHTML).toBe('count is 1');
+    expect(button.innerHTML).toBe('count is 0');
   });
 
   test('should increment counter on click', () => {
