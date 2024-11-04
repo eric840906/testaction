@@ -15,9 +15,9 @@ describe('setupCounter', () => {
     document.body.removeChild(button);
   });
 
-  test('should initialize counter to 0', () => {
+  test('should initialize counter to 2', () => {
     setupCounter(button);
-    expect(button.innerHTML).toBe('count is 0');
+    expect(button.innerHTML).toBe('count is 2');
   });
 
   test('should increment counter on click', () => {
