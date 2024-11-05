@@ -1,0 +1,22 @@
+name: Build on Merge and Isip Changes
+
+on:
+    push:
+        branches:
+            - master
+        paths:
+            - 'isip/**'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Build on merge
+              run: |
+                  cd isip
+                  echo "installing dependencies"
+                  echo "Building isip"
