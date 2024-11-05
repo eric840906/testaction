@@ -3,7 +3,7 @@ name: Build on Merge and Onead-lib Changes
 on:
     push:
         branches:
-            - master
+            - main
         paths:
             - 'onead_lib/**'
 
