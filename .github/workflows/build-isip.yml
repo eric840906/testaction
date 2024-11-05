@@ -3,7 +3,7 @@ name: Build on Merge and Isip Changes
 on:
     push:
         branches:
-            - master
+            - main
         paths:
             - 'isip/**'
 
