@@ -1,0 +1,22 @@
+name: Build on Merge and Onead-lib Changes
+
+on:
+    push:
+        branches:
+            - master
+        paths:
+            - 'onead_lib/**'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Build on merge
+              run: |
+                  cd onead_lib
+                  echo "installing dependencies"
+                  echo "Building onead-lib"
