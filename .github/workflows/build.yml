@@ -14,8 +14,14 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-
+            - uses: dorny/paths-filter@v3
+              id: changes
+              with:
+                filters: |
+                    src:
+                      - 'isip/**'
             - name: Build on merge
+              if: steps.changes.outputs.src == 'true'
               run: |
                   cd isip
                   echo "installing dependencies"
@@ -27,8 +33,15 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+            - uses: dorny/paths-filter@v3
+              id: changes
+              with:
+                filters: |
+                    src:
+                      - 'onead_lib/**'
 
             - name: Build on merge
+              if: steps.changes.outputs.src == 'true'
               run: |
                   cd onead_lib
                   echo "installing dependencies"
