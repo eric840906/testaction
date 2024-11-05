@@ -1,4 +1,4 @@
-name: Build on Merge and Isip Changes
+name: Build
 
 on:
     push:
@@ -8,7 +8,7 @@ on:
             - 'isip/**'
 
 jobs:
-    build:
+    build-isip:
         runs-on: ubuntu-latest
 
         steps:
@@ -20,3 +20,16 @@ jobs:
                   cd isip
                   echo "installing dependencies"
                   echo "Building isip"
+
+    build-onead_lib:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Build on merge
+              run: |
+                  cd onead_lib
+                  echo "installing dependencies"
+                  echo "Building onead-lib"
