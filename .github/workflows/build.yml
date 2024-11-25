@@ -96,3 +96,25 @@ jobs:
                 cd $PLAYER_DIR
                 echo "install npm"
                 echo "build oneplayer"
+            - name: Upload build artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                name: build-artifacts
+                path: |
+                  ${{ env.ISIP_DIR }}/dist
+                  ${{ env.ONEADLIB_DIR }}/dist
+                  ${{ env.PLAYER_DIR }}/dist
+    deploy:
+        needs: build  # 確保在建置作業完成後執行
+        runs-on: ubuntu-latest
+        steps:
+          - name: Download build artifacts
+            uses: actions/download-artifact@v3
+            with:
+              name: build-artifacts
+              path: dist
+
+          - name: Deploy
+            run: |
+              # 這裡放置您的部署指令
+              echo "Deploying builds from dist directory"
