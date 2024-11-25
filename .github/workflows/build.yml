@@ -4,11 +4,9 @@ on:
     push:
         branches:
             - main
-        paths:
-            - 'isip/**'
 
 jobs:
-    build-isip:
+    isip-diff:
         runs-on: ubuntu-latest
 
         steps:
@@ -20,14 +18,13 @@ jobs:
                 filters: |
                     src:
                       - 'isip/**'
-            - name: Build on merge
+            - name: record changes
               if: steps.changes.outputs.src == 'true'
-              run: |
-                  cd isip
-                  echo "installing dependencies"
-                  echo "Building isip"
+              run: echo "$BUILD_ISIP=true" >> "$GITHUB_ENV"
+        outputs:
+            BUILD_ISIP: ${{ env.BUILD_ISIP }}
 
-    build-onead_lib:
+    onead_lib-diff:
         runs-on: ubuntu-latest
 
         steps:
@@ -40,9 +37,62 @@ jobs:
                     src:
                       - 'onead_lib/**'
 
-            - name: Build on merge
+            - name: record changes
               if: steps.changes.outputs.src == 'true'
+              run: echo "$BUILD_ONEADLIB=true" >> "$GITHUB_ENV"
+        outputs:
+            BUILD_ONEADLIB: ${{ env.BUILD_ISIP }}
+    player-diff:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - uses: dorny/paths-filter@v3
+              id: changes
+              with:
+                filters: |
+                    src:
+                      - 'oneplayer/**'
+            - name: record changes
+              if: steps.changes.outputs.src == 'true'
+              run: echo "$BUILD_ONEPLAYER=true" >> "$GITHUB_ENV"
+        outputs:
+            BUILD_ONEPLAYER: ${{ env.BUILD_ONEPLAYER }}
+
+    build:
+        runs-on: ubuntu-latest
+        if: ${{ always() }}
+        needs: [isip-diff, onead_lib-diff, player-diff]
+        env:
+            BUILD_ISIP: ${{ needs.isip-diff.outputs.BUILD_ISIP }}
+            BUILD_ONEADLIB: ${{ needs.onead_lib-diff.outputs.BUILD_ONEADLIB }}
+            BUILD_ONEPLAYER: ${{ needs.player-diff.outputs.BUILD_ONEPLAYER }}
+            ISIP_DIR: 'isip'
+            ONEADLIB_DIR: 'onead_lib'
+            PLAYER_DIR: 'oneplayer'
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: '18'
+            - name: build isip
+              if: ${{ env.BUILD_ISIP == 'true' }}
               run: |
-                  cd onead_lib
-                  echo "installing dependencies"
-                  echo "Building onead-lib"
+                cd $ISIP_DIR
+                echo "install npm"
+                echo "build isip"
+            - name: build onead_lib
+              if: ${{ env.BUILD_ONEADLIB == 'true' }}
+              run: |
+                cd $ONEADLIB_DIR
+                echo "install npm"
+                echo "build onead_lib"
+            - name: build oneplayer
+              if: ${{ env.BUILD_ONEPLAYER == 'true' }}
+              run: |
+                cd $PLAYER_DIR
+                echo "install npm"
+                echo "build oneplayer"
