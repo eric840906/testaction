@@ -20,7 +20,7 @@ jobs:
                       - 'isip/**'
             - name: record changes
               if: steps.changes.outputs.src == 'true'
-              run: echo "$BUILD_ISIP=true" >> "$GITHUB_ENV"
+              run: echo "BUILD_ISIP=true" >> "$GITHUB_ENV"
         outputs:
             BUILD_ISIP: ${{ env.BUILD_ISIP }}
 
@@ -39,7 +39,7 @@ jobs:
 
             - name: record changes
               if: steps.changes.outputs.src == 'true'
-              run: echo "$BUILD_ONEADLIB=true" >> "$GITHUB_ENV"
+              run: echo "BUILD_ONEADLIB=true" >> "$GITHUB_ENV"
         outputs:
             BUILD_ONEADLIB: ${{ env.BUILD_ISIP }}
     player-diff:
@@ -56,7 +56,7 @@ jobs:
                       - 'oneplayer/**'
             - name: record changes
               if: steps.changes.outputs.src == 'true'
-              run: echo "$BUILD_ONEPLAYER=true" >> "$GITHUB_ENV"
+              run: echo "BUILD_ONEPLAYER=true" >> "$GITHUB_ENV"
         outputs:
             BUILD_ONEPLAYER: ${{ env.BUILD_ONEPLAYER }}
 
