@@ -134,7 +134,6 @@ jobs:
             with:
               path: guoshipartners
           - name: Deploy to Production Branch
-            if: ${{github.event.pull_request.merged == true}}
             uses: JamesIves/github-pages-deploy-action@v4
             with:
               branch: production
