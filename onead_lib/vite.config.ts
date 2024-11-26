@@ -37,6 +37,7 @@ export default defineConfig({
         entryFileNames: 'isip.js',
       },
     },
+    emptyOutDir: false,
   },
   // config options
 })

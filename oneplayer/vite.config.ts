@@ -37,6 +37,7 @@ export default defineConfig({
         entryFileNames: 'oneplayer.js',
       },
     },
+    emptyOutDir: false,
   },
   // config options
 })
