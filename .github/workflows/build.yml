@@ -82,20 +82,20 @@ jobs:
               if: ${{ env.BUILD_ISIP == 'true' }}
               run: |
                 cd $ISIP_DIR
-                echo "install npm"
-                echo "build isip"
+                npm install
+                npm run build
             - name: build onead_lib
               if: ${{ env.BUILD_ONEADLIB == 'true' }}
               run: |
                 cd $ONEADLIB_DIR
-                echo "install npm"
-                echo "build onead_lib"
+                npm install
+                npm run build
             - name: build oneplayer
               if: ${{ env.BUILD_ONEPLAYER == 'true' }}
               run: |
                 cd $PLAYER_DIR
-                echo "install npm"
-                echo "build oneplayer"
+                npm install
+                npm run build
             - name: Upload build artifacts
               uses: actions/upload-artifact@v3
               with:
