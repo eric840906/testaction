@@ -6,12 +6,20 @@ on:
             - main
 
 jobs:
+    get-current-branch-sha:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get Current SHA
+              run: |
+                  pr_info=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.issue.number || github.event.number }}")
+                  branch_sha=$(echo "$pr_info" | jq -r '.head.sha')
+                  echo "CURRENT_SHA=$branch_sha" >> $GITHUB_ENV
+        outputs:
+            CURRENT_SHA: ${{ env.CURRENT_SHA }}
     isip-diff:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
             - uses: dorny/paths-filter@v3
               id: changes
               with:
@@ -28,8 +36,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
             - uses: dorny/paths-filter@v3
               id: changes
               with:
@@ -47,8 +53,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
             - uses: dorny/paths-filter@v3
               id: changes
               with:
@@ -66,6 +70,7 @@ jobs:
         if: ${{ always() }}
         needs: [isip-diff, onead_lib-diff, player-diff]
         env:
+            CURRENT_SHA: ${{ needs.get-current-branch-sha.outputs.CURRENT_SHA }}
             BUILD_ISIP: ${{ needs.isip-diff.outputs.BUILD_ISIP }}
             BUILD_ONEADLIB: ${{ needs.onead_lib-diff.outputs.BUILD_ONEADLIB }}
             BUILD_ONEPLAYER: ${{ needs.player-diff.outputs.BUILD_ONEPLAYER }}
@@ -75,6 +80,8 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+              with:
+                  ref: ${{env.CURRENT_SHA}}
             - name: Set up Node.js
               uses: actions/setup-node@v4
               with:
@@ -108,8 +115,14 @@ jobs:
 
     deploy:
         needs: build  # 確保在建置作業完成後執行
+        env:
+            CURRENT_SHA: ${{ needs.get-current-branch-sha.outputs.CURRENT_SHA }}
         runs-on: ubuntu-latest
         steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+            with:
+                ref: ${{env.CURRENT_SHA}}
           - name: Download build artifacts
             uses: actions/download-artifact@v4
             with:
