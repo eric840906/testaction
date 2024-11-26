@@ -37,6 +37,7 @@ export default defineConfig({
         entryFileNames: 'onead_lib.js',
       },
     },
+    emptyOutDir: false,
   },
   // config options
 })
