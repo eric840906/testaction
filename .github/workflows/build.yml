@@ -114,6 +114,10 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 name: build-artifacts
+                path: |
+                    .
+                    .
+                    .
 
     deploy:
         needs: build  # 確保在建置作業完成後執行
@@ -135,5 +139,5 @@ jobs:
               branch: production
               folder: guoshipartners
               target-folder: guoshipartners
-              clean: true
+              clean: false
               commit-message: ${{github.event.issue.title || github.event.pull_request.title}}
