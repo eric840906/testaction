@@ -33,7 +33,7 @@ export default defineConfig({
           return `/*! onead_lib.js ${formattedTime}\n*/`
         },
         format: 'es',
-        dir: 'dist',
+        dir: '../guoshipartners/static/js',
         entryFileNames: 'onead_lib.js',
       },
     },

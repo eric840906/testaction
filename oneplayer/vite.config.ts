@@ -33,7 +33,7 @@ export default defineConfig({
           return `/*! oneplayer.js ${formattedTime}\n*/`
         },
         format: 'es',
-        dir: 'dist',
+        dir: '../guoshipartners/static/js',
         entryFileNames: 'oneplayer.js',
       },
     },

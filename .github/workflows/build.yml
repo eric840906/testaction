@@ -115,9 +115,7 @@ jobs:
               with:
                 name: build-artifacts
                 path: |
-                    ${{ env.ISIP_DIR }}/dist/isip.js
-                    ${{ env.ONEADLIB_DIR }}/dist/onead_lib.js
-                    ${{ env.PLAYER_DIR }}/dist/oneplayer.js
+                    'guoshipartners/static/js'
 
     deploy:
         needs: build  # 確保在建置作業完成後執行
