@@ -110,10 +110,6 @@ jobs:
                 cd $PLAYER_DIR
                 npm install
                 npm run build
-            - name: list built files
-              run: |
-                cd guoshipartners/static/js
-                ls -la guoshipartners/static/js
             - name: Upload build artifacts
               uses: actions/upload-artifact@v4
               with:
