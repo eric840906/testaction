@@ -111,15 +111,17 @@ jobs:
                 npm install
                 npm run build
             - name: list built files
-              run: ls
+              run: |
+                cd guoshipartners/static/js
+                ls -la guoshipartners/static/js
             - name: Upload build artifacts
               uses: actions/upload-artifact@v4
               with:
                 name: build-artifacts
                 path: |
-                    'guoshipartners/static/js/isip.js'
-                    'guoshipartners/static/js/onead_lib.js'
-                    'guoshipartners/static/js/oneplayer.js'
+                    guoshipartners/static/js/isip.js
+                    guoshipartners/static/js/onead_lib.js
+                    guoshipartners/static/js/oneplayer.js
 
     deploy:
         needs: build  # 確保在建置作業完成後執行
