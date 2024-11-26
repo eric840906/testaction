@@ -115,9 +115,9 @@ jobs:
               with:
                 name: build-artifacts
                 path: |
-                    .
-                    .
-                    .
+                    $ISIP_DIR/dist/isip.js
+                    $ONEADLIB_DIR/dist/onead_lib.js
+                    $PLAYER_DIR/dist/oneplayer.js
 
     deploy:
         needs: build  # 確保在建置作業完成後執行
