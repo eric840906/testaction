@@ -1,9 +1,8 @@
 name: Build
 
 on:
-    push:
-        branches:
-            - main
+    pull_request:
+        types: [closed]
 
 jobs:
     get-current-branch-sha:
