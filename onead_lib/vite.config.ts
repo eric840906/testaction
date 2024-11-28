@@ -30,11 +30,11 @@ export default defineConfig({
             return `${formattedDate} ${inputTime}`
           }
           const formattedTime = timeFormatter(getTWTimeStr())
-          return `/*! isip.js ${formattedTime}\n*/`
+          return `/*! onead_lib.js ${formattedTime}\n*/`
         },
         format: 'es',
         dir: '../guoshipartners/static/js',
-        entryFileNames: 'isip.js',
+        entryFileNames: 'onead_lib.js',
       },
     },
     emptyOutDir: false,
