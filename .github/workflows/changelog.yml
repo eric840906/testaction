@@ -17,30 +17,28 @@ jobs:
         run: |
           BANNER_INFO=""
 
-          # commit history
-          COMMITS_INFO=$(git log ${{ github.event.before }}..HEAD --format="%s@%an" | sort -u)
-          echo "=== Commit History ==="
-          echo "$COMMITS_INFO"
+          # 取得最後一次 release tag
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          echo "LAST_TAG: $LAST_TAG"
 
-          # banner
-          for file in $CHANGED_FILES; do
-            if [ -f "$file" ]; then
-              banner=$(head -n 1 "$file")
-              BANNER_INFO+="$banner"$'\n'
-            fi
+          if [ -z "$LAST_TAG" ]; then
+            # 沒有 tag 的情況
+            COMMITS_INFO=$(git log --format="%s@%an" | sort -u)
+            CHANGED_FILES=$(git diff --name-only $(git rev-list --max-parents=0 HEAD) HEAD | grep "guoshipartners/static/js/.*\.js$" || true)
+          else
+            # 有 tag 的情況
+            COMMITS_INFO=$(git log ${LAST_TAG}..HEAD --format="%s@%an" | sort -u)
+            CHANGED_FILES=$(git diff --name-only ${LAST_TAG} HEAD | grep "guoshipartners/static/js/.*\.js$" || true)
+          fi
+
+          # 格式化輸出提交信息
+          echo "=== Commit History ==="
+          echo "$COMMITS_INFO" | while IFS= read -r line; do
+            echo "* $line"
           done
 
-          # build changelog
-          CHANGELOG_MD=$(cat << 'EOF'
-          ## Version
-          \`\`\`
-          $BANNER_INFO
-          \`\`\`
-
-          ## Commit History
-          $COMMITS_INFO
-
-          ## JIRA
-          JIRA url
-          EOF
-          )
+          # 格式化輸出變更檔案
+          echo -e "\n=== Changed Files ==="
+          echo "$CHANGED_FILES" | while IFS= read -r file; do
+            echo "* $file"
+          done
