@@ -110,6 +110,14 @@ jobs:
             with:
               path: guoshipartners
               merge-multiple: true
+          - name: List file banners
+            run: |
+              echo "Checking banners in JS files..."
+              for file in guoshipartners/static/js/*.js; do
+                echo "=== $file ==="
+                head -n 1 "$file"
+                echo ""
+              done
           - name: Deploy to Production Branch
             uses: JamesIves/github-pages-deploy-action@v4
             with:
