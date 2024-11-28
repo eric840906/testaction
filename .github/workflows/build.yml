@@ -15,59 +15,36 @@ jobs:
                   echo "CURRENT_SHA=$branch_sha" >> $GITHUB_ENV
         outputs:
             CURRENT_SHA: ${{ env.CURRENT_SHA }}
-    isip-diff:
-        runs-on: ubuntu-latest
 
+    diff:
+        runs-on: ubuntu-latest
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-            - uses: dorny/paths-filter@v3
-              id: changes
-              with:
-                filters: |
-                    src:
-                      - 'isip/**'
-            - name: record changes
-              if: steps.changes.outputs.src == 'true'
-              run: echo "BUILD_ISIP=true" >> "$GITHUB_ENV"
+          - name: Checkout code
+            uses: actions/checkout@v4
+          - uses: dorny/paths-filter@v3
+            id: changes
+            with:
+              filters: |
+                  isip:
+                    - 'isip/**'
+                  onead_lib:
+                    - 'onead_lib/**'
+                  oneplayer:
+                    - 'oneplayer/**'
+          - name: record changes
+            run: |
+                if [ "${{ steps.changes.outputs.isip }}" == "true" ]; then
+                    echo "BUILD_ISIP=true" >> "$GITHUB_ENV"
+                fi
+                if [ "${{ steps.changes.outputs.onead_lib }}" == "true" ]; then
+                    echo "BUILD_ONEADLIB=true" >> "$GITHUB_ENV"
+                fi
+                if [ "${{ steps.changes.outputs.oneplayer }}" == "true" ]; then
+                    echo "BUILD_ONEPLAYER=true" >> "$GITHUB_ENV"
+                fi
         outputs:
             BUILD_ISIP: ${{ env.BUILD_ISIP }}
-
-    onead_lib-diff:
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-            - uses: dorny/paths-filter@v3
-              id: changes
-              with:
-                filters: |
-                    src:
-                      - 'onead_lib/**'
-
-            - name: record changes
-              if: steps.changes.outputs.src == 'true'
-              run: echo "BUILD_ONEADLIB=true" >> "$GITHUB_ENV"
-        outputs:
             BUILD_ONEADLIB: ${{ env.BUILD_ONEADLIB }}
-
-    player-diff:
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-            - uses: dorny/paths-filter@v3
-              id: changes
-              with:
-                filters: |
-                    src:
-                      - 'oneplayer/**'
-            - name: record changes
-              if: steps.changes.outputs.src == 'true'
-              run: echo "BUILD_ONEPLAYER=true" >> "$GITHUB_ENV"
-        outputs:
             BUILD_ONEPLAYER: ${{ env.BUILD_ONEPLAYER }}
 
     build:
