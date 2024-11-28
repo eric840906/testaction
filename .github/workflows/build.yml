@@ -94,6 +94,7 @@ jobs:
                     guoshipartners/static/js/isip.js
                     guoshipartners/static/js/onead_lib.js
                     guoshipartners/static/js/oneplayer.js
+                retention-days: 5
 
     deploy:
         needs: build  # 確保在建置作業完成後執行
@@ -110,14 +111,6 @@ jobs:
             with:
               path: guoshipartners/static/js
               merge-multiple: true
-          - name: List file banners
-            run: |
-              echo "Checking banners in JS files..."
-              for file in guoshipartners/static/js/*.js; do
-                echo "=== $file ==="
-                head -n 1 "$file"
-                echo ""
-              done
           - name: Deploy to Production Branch
             uses: JamesIves/github-pages-deploy-action@v4
             with:

@@ -1,0 +1,45 @@
+name: Generate Changelog
+on:
+  push:
+    branches:
+      - production
+jobs:
+  generate-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate changelog
+        run: |
+          BANNER_INFO=""
+
+          # commit history
+          COMMITS_INFO=$(git log ${{ github.event.before }}..HEAD --format="%s@%an" | sort -u)
+          echo "=== Commit History ==="
+          echo "$COMMITS_INFO"
+
+          # banner
+          for file in $CHANGED_FILES; do
+            if [ -f "$file" ]; then
+              banner=$(head -n 1 "$file")
+              BANNER_INFO+="$banner"$'\n'
+            fi
+          done
+
+          # build changelog
+          CHANGELOG_MD=$(cat << 'EOF'
+          ## Version
+          \`\`\`
+          $BANNER_INFO
+          \`\`\`
+
+          ## Commit History
+          $COMMITS_INFO
+
+          ## JIRA
+          JIRA url
+          EOF
+          )
