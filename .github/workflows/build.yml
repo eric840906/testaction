@@ -110,6 +110,11 @@ jobs:
             with:
               path: guoshipartners
               merge-multiple: true
+          - name: Verify downloaded files
+            run: |
+              ls -R guoshipartners/
+              echo "=== Checking specific JS directory ==="
+              ls -la guoshipartners/static/js/ || echo "Directory not found"
           - name: List file banners
             run: |
               echo "Checking banners in JS files..."
