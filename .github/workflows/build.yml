@@ -50,12 +50,12 @@ jobs:
     build:
         runs-on: ubuntu-latest
         if: ${{ always() }}
-        needs: [isip-diff, onead_lib-diff, player-diff]
+        needs: [diff]
         env:
             CURRENT_SHA: ${{ needs.get-current-branch-sha.outputs.CURRENT_SHA }}
-            BUILD_ISIP: ${{ needs.isip-diff.outputs.BUILD_ISIP }}
-            BUILD_ONEADLIB: ${{ needs.onead_lib-diff.outputs.BUILD_ONEADLIB }}
-            BUILD_ONEPLAYER: ${{ needs.player-diff.outputs.BUILD_ONEPLAYER }}
+            BUILD_ISIP: ${{ needs.diff.outputs.BUILD_ISIP }}
+            BUILD_ONEADLIB: ${{ needs.diff.outputs.BUILD_ONEADLIB }}
+            BUILD_ONEPLAYER: ${{ needs.diff.outputs.BUILD_ONEPLAYER }}
             ISIP_DIR: 'isip'
             ONEADLIB_DIR: 'onead_lib'
             PLAYER_DIR: 'oneplayer'
