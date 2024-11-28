@@ -1,8 +1,9 @@
 name: Generate Changelog
 on:
-  push:
-    branches:
-      - production
+  workflow_run:        # 可以加入這個觸發條件
+    workflows: [Build]  # 部署工作流程的名稱
+    types:
+      - completed
 jobs:
   generate-changelog:
     runs-on: ubuntu-latest
