@@ -32,16 +32,16 @@ jobs:
             CHANGED_FILES=$(git diff --name-only ${LAST_TAG} HEAD | grep "guoshipartners/static/js/.*\.js$" || true)
           fi
 
-          # 格式化輸出變更檔案
-          echo "## Version"
-          echo "\`\`\`"
-          $(for file in $CHANGED_FILES; do
+          # 格式化輸出變更檔案的 banner
+          echo -e "\n## Version"
+          echo "\`\`\`\n"
+          echo "$CHANGED_FILES" | while IFS= read -r file; do
             if [ -f "$file" ]; then
               banner=$(head -n 1 "$file")
-              echo "$banner"+"\n"
+              echo "$banner"
             fi
-          done)
-          echo "\`\`\`"
+          done
+          echo "\`\`\`\n"
 
           # 格式化輸出提交信息
           echo "## What's Changed"
