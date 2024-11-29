@@ -8,6 +8,11 @@ jobs:
   generate-changelog:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: 'production'
+          fetch-depth: 0
       - name: Generate changelog
         run: |
           BANNER_INFO=""
