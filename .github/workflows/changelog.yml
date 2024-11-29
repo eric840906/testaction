@@ -13,9 +13,6 @@ jobs:
         with:
           ref: 'production'
           fetch-depth: 0
-      - name: Fetch tags
-        run: |
-          git fetch --tags --depth=1 origin
       - name: Generate changelog
         run: |
           BANNER_INFO=""
