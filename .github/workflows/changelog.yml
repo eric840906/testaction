@@ -1,7 +1,7 @@
 name: Generate Changelog
 on:
-  workflow_run:        # 可以加入這個觸發條件
-    workflows: [Build]  # 部署工作流程的名稱
+  workflow_run:
+    workflows: [Build]
     types:
       - completed
 jobs:
@@ -32,14 +32,19 @@ jobs:
             CHANGED_FILES=$(git diff --name-only ${LAST_TAG} HEAD | grep "guoshipartners/static/js/.*\.js$" || true)
           fi
 
+          # 格式化輸出變更檔案
+          echo "## Version"
+          echo "```"
+          $(for file in $CHANGED_FILES; do
+            if [ -f "$file" ]; then
+              banner=$(head -n 1 "$file")
+              echo "$banner"+"\n"
+            fi
+          done)
+          echo "```"
+
           # 格式化輸出提交信息
-          echo "=== Commit History ==="
+          echo "## What's Changed"
           echo "$COMMITS_INFO" | while IFS= read -r line; do
             echo "* $line"
-          done
-
-          # 格式化輸出變更檔案
-          echo -e "\n=== Changed Files ==="
-          echo "$CHANGED_FILES" | while IFS= read -r file; do
-            echo "* $file"
           done
