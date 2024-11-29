@@ -1,3 +1,3 @@
-const message = 'Hello, World!123'
+const message = 'Hello, World!'
 const printMessage = (message: string) => console.log(message)
 printMessage(message)
